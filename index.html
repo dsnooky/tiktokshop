@@ -3,22 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viral TikTok Gadgets</title>
+<title>Viral Shopee Gadgets</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<!-- TIKTOK PIXEL -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;
-  var ttq=w[t]=w[t]||[];
-  ttq.methods=["page","track"];
-  ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments)))}};
-  for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-  ttq.load('TIKTOK_PIXEL_ID');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
 
 <style>
 :root{
@@ -106,7 +93,7 @@ body{
 <div class="container">
 
   <div class="header">
-    <div class="badge">🔥 VIRAL TIKTOK GADGETS</div>
+    <div class="badge">🔥 VIRAL SHOPEE GADGETS</div>
     <h2>Best-Selling Shopee Finds</h2>
   </div>
 
@@ -117,7 +104,7 @@ body{
     <ul>
       <li>✅ Cleans keyboard & fan</li>
       <li>⚡ Rechargeable</li>
-      <li>🔥 TikTok trending</li>
+      <li>🔥 Trending gadget</li>
     </ul>
     <a href="#" class="buy" data-product="p1">BUY ON SHOPEE</a>
   </div>
@@ -141,7 +128,7 @@ body{
     <ul>
       <li>💡 Eye protection</li>
       <li>🖥️ Clean desk setup</li>
-      <li>🔥 DeskTok trend</li>
+      <li>🔥 Desk trend</li>
     </ul>
     <a href="#" class="buy" data-product="p3">BUY ON SHOPEE</a>
   </div>
@@ -169,10 +156,6 @@ document.querySelectorAll(".buy").forEach(btn=>{
   const links = products[btn.dataset.product];
   const chosen = links[Math.floor(Math.random()*links.length)];
   btn.href = chosen;
-
-  btn.addEventListener("click",()=>{
-    ttq.track('ViewContent',{product:btn.dataset.product});
-  });
 });
 </script>
 
